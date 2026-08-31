@@ -1,17 +1,14 @@
 Objective: Design a secure architecture for a fictional application (PayFlow)
-• Include users, application, database, internet, IAM, network boundaries, logging and encryption.
-• Create an architecture diagram.
 
 Deliverable: Payflow Cloud-Security-Architecture.png
 
 Skills: Cloud architecture, security controls.
 
+SCENERIO
 
-PayFlow: A Fictional Fintech Application
+PayFlow is a fictional digital banking/fintech platform that allows individuals and small businesses to manage money, make payments, and transfer funds over its web and mobile applications.
 
-PayFlow is a fictional digital banking/fintech platform that allows individuals and small businesses to manage money, make payments, and transfer funds.
-
-My task is to design the cloud security architecture for PayFlow assuming PayFlow can be accessed through web application and a mobile application
+APPLICATION INFORMATION
 
 *1. Users*
 
@@ -66,5 +63,13 @@ Customers need to reach PayFlow over the Internet. The application may also comm
 
 • Payment processors
 • SMS/email providers
+• Identity verification/KYC provider
+• Banking APIs
+
+
+
+TASK
+
+Design the cloud security architecture for PayFlow.
 • Identity verification/KYC provider
 • Banking APIs
