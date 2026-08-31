@@ -1,0 +1,54 @@
+1. Users
+
+- Support Staff
+  - The amount of customer information accessible by staffs should be limited
+  - Staffs should for not for any reason whatsoever be able to initiate transactions on customer account
+
+- Administrators
+
+  - They'll need elevated priviledges for day-to-day activities
+  - They should not automatically have access to customer financial data
+
+2. Application
+  - This will be represented as broken into multiple services.
+
+3. Database
+   Some aforementioned databases hold highly sensitive information
+    - who has access to these databases?
+    - the databases should not be directly accessible from the internet so network segmentation
+    - applications such as authorization and authentication, transaction history and some APIs need database access.
+    - databases hold data at rest, as such they are best encrypted 
+
+4. Services
+   Because all activities occur over the internet, traffic should enter through firewalls and load balancers external services should equally communicate through an encrypted channel with firewalls in place
+
+5. IAM 
+  - Identities need to be created for all humans, machines and processes 
+  - Authentication, Authorization, MFA.
+  - RBAC
+  - Least Priviledge
+  - Root account
+
+6. Network Segmantation
+  - In accordance with compliance, databases should be on a seperate subnet from internet and public facing components
+
+7. Logging and Monitoring
+  - The architecture for Payflow would need a SIEM tool, and an IDS/IPS to alert in case ofsecurity breaches
+
+8. Encryption
+  - Key management
+  - Encryption for data at rest and in transit
+
+Summary of Security Requirements
+
+No direct Internet access to the database.
+Customers must use MFA.
+Employees should have role-based access.
+Follow least privilege.
+Sensitive financial data must be encrypted.
+Security logs should be centralized.
+Administrative access should be tightly controlled.
+A compromise of the public-facing application should not automatically expose the database.
+Financial transactions should be auditable.
+Secrets/API credentials should not be stored directly in application code.
+The architecture should support incident detection and investigation.
